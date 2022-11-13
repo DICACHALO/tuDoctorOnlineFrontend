@@ -2,17 +2,17 @@ import axios from "axios";
 const api = {};
 
 api.listarPacientes = () =>{
-   return axios.get("http://localhost:5000/pacientes");
+   return axios.get("https://tudoctoronlinebackend.herokuapp.com/pacientes");
 };
 
 api.registrarPaciente = (doctor) =>{
-   return axios.post("http://localhost:5000/pacientes", doctor);
+   return axios.post("https://tudoctoronlinebackend.herokuapp.com/pacientes", doctor);
 };
 api.buscarPacienteById = (id) =>{
-   return axios.get(`http://localhost:5000/pacientes/${id}`);
+   return axios.get(`https://tudoctoronlinebackend.herokuapp.com/pacientes/${id}`);
 };
 
 api.modificarPaciente = (id, doctor) =>{
-   return axios.put(`http://localhost:5000/pacientes/${id}`, doctor);
+   return axios.put(`https://tudoctoronlinebackend.herokuapp.com/pacientes/${id}`, doctor);
 };
 export default api;
